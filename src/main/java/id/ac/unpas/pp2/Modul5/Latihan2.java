@@ -13,7 +13,7 @@ import javax.swing.JFrame;
  * @author Muhammad Fauzan nur
  */
 public class Latihan2 {
-    public void main(String[] args) {
+    public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable(){
             public void run() {
                 JFrame frame = new JFrame("Jendela Dengan Label");
