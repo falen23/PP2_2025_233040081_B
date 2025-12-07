@@ -73,18 +73,19 @@ public class TugasModul7 extends JFrame {
         JButton btnSimpan = new JButton("Simpan Data");
         panel.add(btnSimpan);
 
-        // TOMBOL RESET INPUTAN
-
-        JButton btnReset = new JButton("Reset");
-        panel.add(btnReset);
-
-        // Event listener tombol Simpan
+        
+         // Event listener tombol Simpan
         btnSimpan.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 prosesSimpan(); // Memanggil method simpan
             }
         });
+
+        
+        // TOMBOL RESET INPUTAN
+        JButton btnReset = new JButton("Reset");
+        panel.add(btnReset);
 
         // Event tombol Reset
         btnReset.addActionListener(new ActionListener() {
