@@ -7,6 +7,7 @@ package id.ac.unpas.pp2.Modul10;
 import id.ac.unpas.pp2.Modul10.Controller.MahasiswaController;
 import id.ac.unpas.pp2.Modul10.Model.MahasiswaModel;
 import id.ac.unpas.pp2.Modul10.View.MahasiswaView;
+import javax.swing.SwingUtilities;
 /**
  *
  * @author Muhammad Fauzan nur
@@ -16,10 +17,12 @@ import id.ac.unpas.pp2.Modul10.View.MahasiswaView;
 
 public class Main {
     public static void main(String[] args) {
-        MahasiswaView view = new MahasiswaView();
-        MahasiswaModel model = new MahasiswaModel();
-        new MahasiswaController(view, model);
-        view.setVisible(true);
+        SwingUtilities.invokeLater(() -> {
+            MahasiswaModel model = new MahasiswaModel();
+            MahasiswaView view = new MahasiswaView();
+            new MahasiswaController(model, view);
+            view.setVisible(true);
+        });
     }
 }
 
